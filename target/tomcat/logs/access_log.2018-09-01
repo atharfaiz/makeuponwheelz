@@ -1,2 +1,0 @@
-0:0:0:0:0:0:0:1 - - [01/Sep/2018:00:01:43 +0530] "GET /demo/demo.css HTTP/1.1" 500 6389 http-bio-6060-exec-8 21
-0:0:0:0:0:0:0:1 - - [01/Sep/2018:00:01:43 +0530] "GET /assets/js/ng/angular.min.js.map HTTP/1.1" 404 949 http-bio-6060-exec-6 10
