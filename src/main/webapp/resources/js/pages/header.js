@@ -1,0 +1,1 @@
+function LocationController(t,c){c.$$absUrl.lastIndexOf("/contacts")>0?t.activeURL="contacts":t.activeURL="home"}

@@ -1,0 +1,278 @@
+<style>
+.modal-dialog.modal-lg {
+        width: 90% !important;
+        height: 90% important;
+    }
+</style>
+
+    <div class="modal-dialog modal-dialog modal-lg">
+            <form name="myForm" class="form-horizontal" novalidate>
+
+<!--  working hours report employee wise1 -->
+		<table ng-if="conditionHash.workingHoursReportEmpWise" datatable="ng"
+			class="table table-striped table-hover datatable dataTable"
+			id="datatable3" cellspacing="0" width="100%" role="grid"
+			aria-describedby="datatable3_info" style="width: 100%;">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Department</th>
+					<th rowspan="1" colspan="1" title="Present+Weekoff">Total Working Days</th>
+					<th rowspan="1" colspan="1">Absent</th>
+					<th rowspan="1" colspan="1">Weekoff</th>
+					<th rowspan="1" colspan="1">Working Hours</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dt-rows ng-repeat="summaryEmp in dataList">
+					<td>{{$index + 1}}</td>
+					<td>{{summaryEmp.empName}} <br /> {{summaryEmp.employeeID}}</td>
+					<td>{{summaryEmp.DepartmentName}}</td>
+					<td>{{summaryEmp.workingDays}}</td>
+					<td>{{summaryEmp.absent}}</td>
+					<td>{{summaryEmp.weekOff}}</td>
+					<td>{{summaryEmp.workingHours}}:{{summaryEmp.workingMin}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+		
+		
+		<!-- workingHour report dept wise 2-->
+		<table ng-if="conditionHash.workingHoursReportDeptWise" datatable="ng"
+			class="table table-striped table-hover datatable dataTable"
+			id="datatable3" cellspacing="0" width="100%" role="grid"
+			aria-describedby="datatable3_info" style="width: 100%;">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Department</th>
+					<th rowspan="1" colspan="1" title="Present+Weekoff">Total
+						Working Days</th>
+					<th rowspan="1" colspan="1">Absent</th>
+					<th rowspan="1" colspan="1">Weekoff</th>
+					<th rowspan="1" colspan="1">Working Hours</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dt-rows ng-repeat="attendanceSum in dataList">
+					<td>{{$index + 1}}</td>
+					<td>{{attendanceSum.empName}} <br />
+						{{attendanceSum.employeeID}}
+					</td>
+					<td>{{attendanceSum.DepartmentName}}</td>
+					<td>{{attendanceSum.workingDays}}</td>
+					<td>{{attendanceSum.absent}}</td>
+					<td>{{attendanceSum.weekOff}}</td>
+					<td>{{attendanceSum.workingHours}}:{{attendanceSum.workingMin}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+<!--  salary export employee wise3 -->
+		<table ng-if="salaryExportReportEmpWise" datatable='ng'
+			class="table table-striped table-hover" id="" cellspacing="0"
+			width="100%">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Department</th>
+					<th rowspan="1" colspan="1">Present</th>
+					<th rowspan="1" colspan="1">Absent</th>
+					<th rowspan="1" colspan="1">Weekoff</th>
+					<th rowspan="1" colspan="1" title="Present+Weekoff">Total
+						Working Days</th>
+					<th rowspan="1" colspan="1">Working Hours</th>
+					<th rowspan="1" colspan="1">Salary</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr dt-rows ng-repeat="salaryExp in dataList">
+					<td>{{$index + 1}}</td>
+					<td>{{salaryExp.empName}} <br /> {{salaryExp.employeeID}}
+					</td>
+					<td>{{salaryExp.DepartmentName}}</td>
+					<td>{{salaryExp.present}}</td>
+					<td>{{salaryExp.absent}}</td>
+					<td>{{salaryExp.weekOff}}</td>
+					<td>{{salaryExp.workingDays}}</td>
+					<td>{{salaryExp.workingHours}}:{{salaryExp.workingMin}}</td>
+					<td>{{salaryExp.salary | currency:""}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+ <!--  salary export reports 4-->
+		<table ng-if="conditionHash.salaryExportReport" datatable='ng'
+			class="table table-striped table-hover" id="" cellspacing="0"
+			width="100%">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Department</th>
+					<th rowspan="1" colspan="1">Present</th>
+					<th rowspan="1" colspan="1">Absent</th>
+					<th rowspan="1" colspan="1">Weekoff</th>
+					<th rowspan="1" colspan="1" title="Present+Weekoff">Total
+						Working Days</th>
+					<th rowspan="1" colspan="1">Working Hours</th>
+					<th rowspan="1" colspan="1">Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dt-rows ng-repeat="salaryExport in dataList">
+					<td>{{$index + 1}}</td>
+					<td>{{salaryExport.empName}} <br />
+						{{salaryExport.employeeID}}
+					</td>
+					<td>{{salaryExport.DepartmentName}}</td>
+					<td>{{salaryExport.present}}</td>
+					<td>{{salaryExport.absent}}</td>
+					<td>{{salaryExport.weekOff}}</td>
+					<td>{{salaryExport.workingDays}}</td>
+					<td>{{salaryExport.workingHours}}:{{salaryExport.workingMin}}</td>
+					<td>{{salaryExport.salary | currency:""}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+ <!-- summary report employee wise 5 -->
+		<table ng-if="conditionHash.summaryEmpView" datatable='ng'
+			class="table table-striped table-hover" id="" cellspacing="0"
+			width="100%">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Department</th>
+					<th rowspan="1" colspan="1" title="Present+Weekoff">Total
+						Working Days</th>
+					<th rowspan="1" colspan="1">Present</th>
+					<th rowspan="1" colspan="1">Absent</th>
+					<th rowspan="1" colspan="1">Weekoff</th>
+					<th rowspan="1" colspan="1">Working Hours</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dt-rows ng-repeat="summaryEmp in dataList">
+					<td>{{$index + 1}}</td>
+					<td>{{summaryEmp.empName}} <br /> {{summaryEmp.employeeID}}
+					</td>
+					<td>{{summaryEmp.DepartmentName}}</td>
+					<td>{{summaryEmp.workingDays}}</td>
+					<td>{{summaryEmp.present}}</td>
+					<td>{{summaryEmp.absent}}</td>
+					<td>{{summaryEmp.weekOff}}</td>
+					<td>{{summaryEmp.workingHours}}:{{summaryEmp.workingMin}}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<!--  summary repot department wise6 -->
+		<table ng-if="conditionHash.summaryDeptView" datatable='ng'
+			class="table table-striped table-hover" id="" cellspacing="0"
+			width="100%">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Department</th>
+					<th rowspan="1" colspan="1" title="Present+Weekoff">Total
+						Working Days</th>
+					<th rowspan="1" colspan="1">Present</th>
+					<th rowspan="1" colspan="1">Absent</th>
+					<th rowspan="1" colspan="1">Weekoff</th>
+					<th rowspan="1" colspan="1">Working Hours</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dt-rows ng-repeat="attendanceSum in dataList">
+					<td>{{$index + 1}}</td>
+					<td>{{attendanceSum.empName}} <br />
+						{{attendanceSum.employeeID}}
+					</td>
+					<td>{{attendanceSum.DepartmentName}}</td>
+					<td>{{attendanceSum.workingDays}}</td>
+					<td>{{attendanceSum.present}}</td>
+					<td>{{attendanceSum.absent}}</td>
+					<td>{{attendanceSum.weekOff}}</td>
+					<td>{{attendanceSum.workingHours}}:{{attendanceSum.workingMin}}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		 <!-- tableDepAttView rpt 7-->
+		<table ng-if="tableDepAttView" datatable='ng' class="table footable"
+			data-page-navigation=".pagination" data-page-size="10">
+			<thead>
+				<tr>
+					<th>Sr. No.</th>
+					<th>Employee Name</th>
+					<th>Enroll Id</th>
+					<th>Date</th>
+					<th>Status</th>
+					<th>IN Time</th>
+					<th>OUT Time</th>
+					<th>Working Hrs</th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+				<tr dt-rows ng-repeat="attendance in dataList">
+					<th>{{$index+1}}</th>
+					<th>{{attendance.employeeName}}</th>
+					<th>{{attendance.enrollId}}</th>
+					<th>{{attendance.attendanceDate | date:'dd-MM-yy'}}</th>
+					<th>{{attendance.status}}</th>
+					<th>{{attendance.inTime | date:'hh:mm'}}</th>
+					<th>{{attendance.outTime | date:'hh:mm'}}</th>
+					<th>{{attendance.workingHrs}}:{{attendance.workingMins}}</th>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+<!--  employee report id wise 8-->
+		<table datatable='ng' ng-if="conditionHash.tableView"
+			class="table table-striped table-hover" id="" cellspacing="0"
+			width="100%">
+			<thead>
+				<tr>
+					<th rowspan="1" colspan="1">Sr. No.</th>
+					<th>Employee Name</th>
+					<th rowspan="1" colspan="1">Enroll Id</th>
+					<th rowspan="1" colspan="1">Date</th>
+					<th rowspan="1" colspan="1">Status</th>
+					<th rowspan="1" colspan="1">IN Time</th>
+					<th rowspan="1" colspan="1">OUT Time</th>
+					<th rowspan="1" colspan="1">Working Hrs</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr dt-rows
+					ng-repeat="attendance in dataList | orderBy:sortType:sortReverse | filter:searchReport">
+					<td>{{$index + 1}}</td>
+					<td>{{attendance.employeeName}} <br />
+						{{attendance.employeeId}}
+					</td>
+					<td>{{attendance.enrollId}}</td>
+					<td>{{attendance.attendanceDate | date:'dd-MM-yyyy'}}</td>
+					<td>{{attendance.status}}&nbsp;</td>
+					<td>{{attendance.inTime | date:'HH:mm':'+0530'}}</td>
+					<td>{{attendance.outTime | date:'HH:mm':'+0530'}}</td>
+					<td>{{attendance.workingHrs}}:{{attendance.workingMins}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+    </div>

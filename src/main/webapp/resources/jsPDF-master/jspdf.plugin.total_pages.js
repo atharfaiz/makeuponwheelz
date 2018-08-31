@@ -1,0 +1,1 @@
+!function(e){"use strict";e.putTotalPages=function(e){for(var t=new RegExp(e,"g"),n=1;n<=this.internal.getNumberOfPages();n++)for(var a=0;a<this.internal.pages[n].length;a++)this.internal.pages[n][a]=this.internal.pages[n][a].replace(t,this.internal.getNumberOfPages());return this}}(jsPDF.API);

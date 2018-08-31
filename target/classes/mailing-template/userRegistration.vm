@@ -1,0 +1,37 @@
+<html>
+				<head>
+					<style type="text/css">
+						body {margin: 0; padding: 0; min-width: 100%!important;}
+						.content {width: 100%; max-width: 600px;}  
+					</style>
+				</head>
+				<body yahoo bgcolor="#A3C8FF">
+					<table width="100%" bgcolor="#E6E6E6" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td style="text-align:center;font-size:25px;color:#005CE6;" bgcolor="#000000">
+								<b>krenai</b>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top:40px;">
+								<table class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td style="text-align:left">
+											${emailBody}
+										</td>
+									</tr>
+									<tr>
+										<td style="text-align:left">
+											${userName}
+										</td>
+									</tr>
+									
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</body>
+			</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+    <!-- Master -->
+    <definition name="master.page" template="/public/template/master.jsp">
+        <put-attribute name="header" value="/public/template/header.jsp"/>
+        <put-attribute name="sidebar" value="/public/template/sidebar.jsp"/>
+        <put-attribute name="footer" value="/public/template/footer.jsp"/>
+    </definition>
+    
+    <definition name="master-subcat.page" template="/public/template/master-subcat.jsp">
+        <put-attribute name="header" value="/public/template/header2.jsp"/>
+        <put-attribute name="sidebar" value="/public/template/sidebar.jsp"/>
+        <put-attribute name="footer" value="/public/template/footer.jsp"/>
+    </definition>
+    
+    <definition name="home" extends="master.page">
+        <put-attribute name="body" value="/welcome.jsp"/>
+    </definition>
+     
+    <definition name="subcat" extends="master-subcat.page">
+        <put-attribute name="body" value="/subcat.jsp"/>
+    </definition>
+    
+    <definition name="login-page" extends="master-subcat.page">
+        <put-attribute name="body" value="/login-page.jsp"/>
+    </definition>
+    <definition name="register-page" extends="master-subcat.page">
+        <put-attribute name="body" value="/register-page.jsp"/>
+    </definition>
+     <definition name="package-page" extends="master-subcat.page">
+        <put-attribute name="body" value="/packages-page.jsp"/>
+    </definition>
+    <definition name="about-page" extends="master-subcat.page">
+        <put-attribute name="body" value="/about-us.jsp"/>
+    </definition>
+    
+    <definition name="contact-page" extends="master-subcat.page">
+        <put-attribute name="body" value="/contact-page.jsp"/>
+    </definition>
+    
+    <definition name="order-page" extends="master-subcat.page">
+        <put-attribute name="body" value="/order-page.jsp"/>
+    </definition>
+    
+</tiles-definitions>
+
+
+
+
+

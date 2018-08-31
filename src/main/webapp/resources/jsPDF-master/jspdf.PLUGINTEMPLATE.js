@@ -1,0 +1,1 @@
+!function(n){"use strict";n.myFunction=function(n){return this}}(jsPDF.API);

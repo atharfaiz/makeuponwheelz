@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+
+<head>
+  <title>nanoGALLERY</title>
+	<style>
+		* {font-family: sans-serif; color:#fff;} 
+		a, h1, h2, h3, h4, h5 {text-align:center; color:#eee;}
+		body {background:#333;}
+	</style>
+
+  
+  
+  <!-- nanoGALLERY                                                                                                          -->
+  <!-- Plugin for jQuery by Christophe Brisbois                                                                             -->
+  <!-- Demo & doc: http://nanogallery.brisbois.fr                                                                           -->
+  <!-- Sources: https://github.com/Kris-B/nanoGALLERY                                                                       -->
+  <!-- License: For personal, non-profit organizations, or open source projects, you may use nanoGALLERY for free.          -->
+  <!-- -------- ALL OTHER USES REQUIRE THE PURCHASE OF A PROFESSIONAL LICENSE.                                              -->
+
+  
+  <!-- #################################################################################################################### -->
+  <!-- jQuery                                                                                                               -->
+  <!--                                                                                                                      -->
+  <script type="text/javascript" src="third.party/jquery-1.7.1.min.js"></script>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  -->
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  -->
+  <!-- #################################################################################################################### -->
+
+
+  <!-- #################################################################################################################### -->
+  <!-- nanoGALLERY CSS files                                                                                                -->
+  <!-- only include the css file corresponding to the selected theme                                                        -->
+  <!-- include 'nanogallery.css' if no theme is specified                                                                   -->
+  <!--                                                                                                                      -->
+	<!-- nanoGALLERY - default theme css file                                                                                 -->
+	<link href="/assets/css/nanogallery.css" rel="stylesheet" type="text/css">
+	<!-- nanoGALLERY - css file for the theme 'clean'                                                                         -->
+
+	<!-- nanoGALLERY - css file for the theme 'light'                                                                         -->
+
+  <!-- #################################################################################################################### -->
+
+  <!-- #################################################################################################################### -->
+	<!-- nanoGALLERY javascript                                                                                               -->
+  <!--                                                                                                                      -->
+	<script type="text/javascript" src="jquery.nanogallery.js"></script>
+  <!--                                                                                                                      -->
+  <!-- #################################################################################################################### -->
+
+  
+
+  
+  
+  
+  <!-- #################################################################################################################### -->
+	<!-- nanoGALLERY DEMO PANEL javascript - NOT NEEDED TO USE THE PLUGIN                                                     -->
+	
+  <!-- #################################################################################################################### -->
+
+
+  <!-- #################################################################################################################### -->
+  <!-- transit.js animation engine - Optionnal                                                                              -->
+  <!-- This plugin is used alternatively for all animations (hover effects et image display animations)                     -->
+  <!-- warning: not compatible with IE9-                                                                                    -->
+  <!--                                                                                                                      -->
+  <!--
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js">
+  </script>                                 
+  -->
+  <!-- #################################################################################################################### -->
+
+  
+  <!-- #################################################################################################################### -->
+  <!-- fancyBox - Optionnal                                                                                                 -->
+  <!--                                                                                                                      -->
+  <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> -->
+  <!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js?v=2.1.5"></script>  -->
+  <!-- #################################################################################################################### -->
+
+
+  <!-- #################################################################################################################### -->
+  <!-- velocity animation engine - optionnal - JUST FOR TEST PURPOSES / PLEASE DO NOT USE!!!                                -->
+  <!--                                                                                                                      -->
+  <!-- <script type="text/javascript" src="third.party/velocity/jquery.velocity.min.js"></script>                           -->
+	<!-- <script type="text/javascript" src="http://julian.com/research/velocity/build/jquery.velocity.min.js"></script>      -->
+  <!-- #################################################################################################################### -->
+
+  
+	<script>
+		$(document).ready(function () {
+    
+			var contentGalleryMLN=[
+				{
+					src: 'demonstration/image_01.jpg',		// image url
+					srct: 'demonstration/image_01ts.jpg',	// thumbnail url
+					title: 'image 01', 						        // thumbnail title
+					ID:2
+				},
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 02',
+					ID:3 },
+				{ src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'album 1',
+					ID:103,	kind:'album' },
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'album 2',
+					ID:104,	kind:'album' },
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'album 3',
+					ID:105, albumID:103,	kind:'album' },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 03',
+          ID:4 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 04',
+          ID:5 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 05',
+          ID:6 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 06',
+          ID:7 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 07',
+          ID:8 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 08',
+          ID:9 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 09',
+          ID:10 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 10',
+          ID:11 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 10',
+          ID:12 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 11',
+          ID:13 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 12',
+          ID:14 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 13',
+          ID:15 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 14',
+          ID:16 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 15',
+          ID:17 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 16',
+          ID:18 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 17',
+          ID:19 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 18',
+          ID:20 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 19',
+          ID:21 },
+				{ src: 'demonstration/image_02.jpg', srct: 'demonstration/image_02ts.jpg', title: 'image 20',
+          ID:22 },
+				{ src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 1a',
+					ID:23, albumID:103	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 1b',
+					ID:24, albumID:103	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 1c',
+					ID:25, albumID:103	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 1d',
+					ID:26, albumID:103	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 1e',
+					ID:27, albumID:103 },
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 1f',
+					ID:28, albumID:103	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2a',
+					ID:29, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2b',
+					ID:30, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2c',
+					ID:31, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2d',
+					ID:32, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2e',
+					ID:33, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2f',
+					ID:34, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2g',
+					ID:35, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2h',
+					ID:36, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2i',
+					ID:37, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2j',
+					ID:38, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2k',
+					ID:39, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2l',
+					ID:40, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2m',
+					ID:41, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2n',
+					ID:42, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2o',
+					ID:43, albumID:104	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2n',
+					ID:44, albumID:105	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2n',
+					ID:45, albumID:105	},
+				{	src: 'demonstration/image_03.jpg', srct: 'demonstration/image_03ts.jpg', title: 'image 2o',
+					ID:46, albumID:105	}
+        ];
+			
+			jQuery("#nanoGalleryMLN").nanoGallery({thumbnailWidth:120,thumbnailHeight:120,
+				items:contentGalleryMLN,
+				//paginationMaxItemsPerPage:3,
+				paginationMaxLinesPerPage:1,
+				thumbnailHoverEffect:'imageInvisible,imageScale150',
+        viewerDisplayLogo:true,
+				useTags:false,
+        locationHash:false,
+        breadcrumbAutoHideTopLevel:true,
+        maxItemsPerLine:5,
+        locationHash: false,
+        paginationDots : true
+			});
+			
+
+
+	
+		});
+	</script>
+
+</head>
+
+<!-- <body style="background-color:#fff;"> -->
+<body>
+
+
+	
+	<br><br><br><br><br><br><br><br><br>
+	<h2 style="background:#555;">----- Multi-level navigation and pagination (API) -----</h2><br><br>
+	<div id="nanoGalleryMLN"></div>
+
+</body>
+</html>

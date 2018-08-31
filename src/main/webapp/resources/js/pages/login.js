@@ -1,0 +1,1 @@
+function loginController(r,o){var n=""+o.$$absUrl;r.displayLoginError=n.indexOf("error")>=0}

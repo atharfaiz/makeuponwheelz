@@ -1,0 +1,1 @@
+var UIButtons=function(){var t=function(){Ladda.bind(".ladda-button",{timeout:2e3}),Ladda.bind(".progress-demo button",{callback:function(t){var n=0,a=setInterval(function(){n=Math.min(n+.1*Math.random(),1),t.setProgress(n),1===n&&(t.stop(),clearInterval(a))},200)}})};return{init:function(){t()}}}();
